@@ -1,0 +1,11 @@
+import { Title } from "@angular/platform-browser"
+
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+    <h3>
+        <a [Title]="product.name + ' details'">
+            {{ product.name }}
+        </a>
+    </h3>
+</div>
