@@ -1,5 +1,3 @@
-import { Title } from "@angular/platform-browser"
-
 <h2>Products</h2>
 
 <div *ngFor="let product of products">
@@ -8,4 +6,13 @@ import { Title } from "@angular/platform-browser"
             {{ product.name }}
         </a>
     </h3>
+
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+    </p>
+
+    <button type="button" (click)="share()">
+        Share
+    </button>
+
 </div>
